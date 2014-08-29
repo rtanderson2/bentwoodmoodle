@@ -21,6 +21,11 @@ body{
     background-image: url("/moodle/theme/bentwoodmoodle/pix/bg-texture.png");
     font-family: 'News Cycle', sans-serif;
 }
+
+h1{
+    font-family: 'News Cycle', sans-serif;
+    font-size: 1.5 em;
+}
 /* Custom CSS Settings
 -------------------------*/
 [[setting:customcss]]
