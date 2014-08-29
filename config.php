@@ -28,7 +28,7 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$THEME->name = 'BentwoodAK';
+$THEME->name = 'bentwoodmoodle';
 
 /////////////////////////////////
 // The only thing you need to change in this file when copying it to
