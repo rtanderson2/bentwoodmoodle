@@ -18,7 +18,7 @@ a.logo {
     float: right;
 }
 body{
-    background-image: url("/moodle/theme/bentwoodmoodle/pix/bg-texture.png");
+    background-image: url([[pix:theme|bg-texture.png]]);
     font-family: 'News Cycle', sans-serif;
 }
 
@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6{
     font-family: 'News Cycle', sans-serif;
 }
 
-.brand{
+.navbar .brand{
     font-family: 'News Cycle', sans-serif;
     /*background: red;*/
 }
