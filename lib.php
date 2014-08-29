@@ -61,7 +61,7 @@ function theme_bentwoodmoodle_process_css($css, $theme) {
  * @param string $logo The URL of the logo.
  * @return string The parsed CSS
  */
-function theme_clean_set_logo($css, $logo) {
+function theme_bentwoodmoodle_set_logo($css, $logo) {
     $tag = '[[setting:logo]]';
     $replacement = $logo;
     if (is_null($replacement)) {
@@ -85,9 +85,9 @@ function theme_clean_set_logo($css, $logo) {
  * @param array $options
  * @return bool
  */
-function theme_clean_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
+function theme_bentwoodmoodle_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
     if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'logo') {
-        $theme = theme_config::load('clean');
+        $theme = theme_config::load('bentwoodmoodle');
         return $theme->setting_file_serve('logo', $args, $forcedownload, $options);
     } else {
         send_file_not_found();
@@ -101,7 +101,7 @@ function theme_clean_pluginfile($course, $cm, $context, $filearea, $args, $force
  * @param string $customcss The custom CSS to add.
  * @return string The CSS which now contains our custom CSS.
  */
-function theme_clean_set_customcss($css, $customcss) {
+function theme_bentwoodmoodle_set_customcss($css, $customcss) {
     $tag = '[[setting:customcss]]';
     $replacement = $customcss;
     if (is_null($replacement)) {
@@ -126,7 +126,7 @@ function theme_clean_set_customcss($css, $customcss) {
  *      - heading HTML to use for the heading. A logo if one is selected or the default heading.
  *      - footnote HTML to use as a footnote. By default ''.
  */
-function theme_clean_get_html_for_settings(renderer_base $output, moodle_page $page) {
+function theme_bentwoodmoodle_get_html_for_settings(renderer_base $output, moodle_page $page) {
     global $CFG;
     $return = new stdClass;
 
@@ -150,25 +150,25 @@ function theme_clean_get_html_for_settings(renderer_base $output, moodle_page $p
 }
 
 /**
- * All theme functions should start with theme_clean_
+ * All theme functions should start with theme_bentwoodmoodle_
  * @deprecated since 2.5.1
  */
-function clean_process_css() {
+function bentwoodmoodle_process_css() {
     throw new coding_exception('Please call theme_'.__FUNCTION__.' instead of '.__FUNCTION__);
 }
 
 /**
- * All theme functions should start with theme_clean_
+ * All theme functions should start with theme_bentwoodmoodle_
  * @deprecated since 2.5.1
  */
-function clean_set_logo() {
+function bentwoodmoodle_set_logo() {
     throw new coding_exception('Please call theme_'.__FUNCTION__.' instead of '.__FUNCTION__);
 }
 
 /**
- * All theme functions should start with theme_clean_
+ * All theme functions should start with theme_bentwoodmoodle_
  * @deprecated since 2.5.1
  */
-function clean_set_customcss() {
+function bentwoodmoodle_set_customcss() {
     throw new coding_exception('Please call theme_'.__FUNCTION__.' instead of '.__FUNCTION__);
 }
