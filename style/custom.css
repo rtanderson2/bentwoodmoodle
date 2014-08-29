@@ -16,7 +16,7 @@ a.logo {
     float: right;
 }
 body{
-    background: black;
+    background-image: url("/pix/bg-texture.png");
 }
 /* Custom CSS Settings
 -------------------------*/
