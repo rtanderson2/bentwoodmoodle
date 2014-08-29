@@ -15,7 +15,9 @@ a.logo {
     display: block;
     float: right;
 }
-
+body{
+    background: black;
+}
 /* Custom CSS Settings
 -------------------------*/
 [[setting:customcss]]
