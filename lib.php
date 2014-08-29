@@ -23,7 +23,7 @@
  * For full information about creating Moodle themes, see:
  * http://docs.moodle.org/dev/Themes_2.0
  *
- * @package   theme_clean
+ * @package   theme_bentwoodmoodle
  * @copyright 2013 Moodle, moodle.org
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -37,11 +37,11 @@
  * @param theme_config $theme The theme config object.
  * @return string The parsed CSS The parsed CSS.
  */
-function theme_clean_process_css($css, $theme) {
+function theme_bentwoodmoodle_process_css($css, $theme) {
 
     // Set the background image for the logo.
     $logo = $theme->setting_file_url('logo', 'logo');
-    $css = theme_clean_set_logo($css, $logo);
+    $css = theme_bentwoodmoodle_set_logo($css, $logo);
 
     // Set custom CSS.
     if (!empty($theme->settings->customcss)) {
@@ -49,7 +49,7 @@ function theme_clean_process_css($css, $theme) {
     } else {
         $customcss = null;
     }
-    $css = theme_clean_set_customcss($css, $customcss);
+    $css = theme_bentwoodmoodle_set_customcss($css, $customcss);
 
     return $css;
 }
